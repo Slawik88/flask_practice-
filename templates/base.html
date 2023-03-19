@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+    {% block title %}
+        {% if title %}
+            <title>Flask - {{ title }}</title>
+        {% else %}
+            <title>Flask Blog</title>
+        {% endif %}
+    {% endblock %}
+</head>
+<body>
+<div class="wrapper">
+    {% block menu %}
+    {% endblock menu %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block main_page %}
+    {% endblock main_page %}
+
+
+    {% block footer %}
+    {% endblock footer %}
+</div>
+
+
+
+</body>
+</html>
